@@ -3,7 +3,7 @@ This File recorded the problem and code when I learned Docker.</br>
 If you have some problems and code you want to reshare or somethig I wrote wrong, you can commit your file, and i will check and merge.</br>
 Hope this file can help everyone and get some inspiration !
 
-## docker instructions
+## Docker instructions
 * Install Docker engine (Ubuntu)</br>
   ```
   sudo apt-get install docker.io
@@ -12,50 +12,63 @@ Hope this file can help everyone and get some inspiration !
   service docker status 
   ```
 * Standard docker instructions</br>
+  * find the image on docker hub
   ```
-  (omitted sudo by problem 3 below)
-  // find the image on docker hub 
-  // If you want to find specific vision, you can use like ubuntu:16.04, if not, it will be seen as **latest** vision.
+  // (omitted sudo by problem 3 below)
+  // If you want to find specific vision, you can use like ubuntu:16.04, if not, it will be seen as latest vision.
   docker search [image name like ubuntu ,ubuntu:latest or ubuntu:16.04]
-
-  // pull the image
+  ```
+  * pull the image
+  ```
   docker pull [image name]
-
-  // search the images what we have now
+  ```
+  * search the images on local
+  ```
   docker images
-
-  // run the container based on ubuntu image
+  ```
+  * run the container based on ubuntu image
+  ```
   // -i -> interactive with this container
   // -t -> create a terminal for container
   // -d -> run this containr in background
   // --name -> your container name, if you do not want to name, it will be a long ugly id, so...
   docker run -i -t -d --name=[yourname]:[some message, like version] [image name]
   // ex: docker run -i -t -d --name=myubuntu:v0 ubuntu
-
-  // search the container we create
-  // show the **running** containers
+  ```
+  * search the container we create
+  ```
+  // show the running containers
   docker ps
-  // show all containers
+
+  // show all containers (include sleeping containers)
   docker ps -a
-
-  // stop the running container
+  ```
+  * stop the running container
+  ```
   docker stop [container name or container id]
-
-  // awake the sleeping container
+  ```
+  * awake the sleeping container
+  ```
   docker (start or restart) [container name or container id]
-
-  // If you want to use running container
+  ```
+  * use the running container
+  ```
   docker attach [container name or container id]
-
-  // If you want to quit the container
+  ```
+  * leave the running container
+  ```
   exit or tab ctrl+d
-
+  ```
+  * remove container
+  ```
   // remove one container
   docker rm [container name or container id]
 
   // remove all containers
   docker rm $(docker ps -a -q)
-
+  ```
+  * remove images
+  ```
   // When you want to remove the image, you will check there is not any container use the base of this image.
   // If there has one container which based on image you want to remove, the image will not be removed !
 
