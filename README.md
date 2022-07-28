@@ -4,6 +4,21 @@ If you have some problems and code you want to reshare or somethig I wrote wrong
 Hope this file can help everyone and get some inspiration !
 
 ## Docker instructions
+* push your own docker to ducker hub
+  [you need to have account of docker hub]
+  ```
+  docker login
+  
+  // check what image you want to push
+  docker image ls
+
+  // tag image
+  docker tag [image id] [name of ducker hub / ducker repository name : vision]
+  // ex: docker tag 57452930cc15 jxxxxxxj/test-container:1.0.0
+
+  // push to docker hub
+  docker push jxxxxxxj/test-container:1.0.0
+  ```
 * Install Docker engine (Ubuntu)</br>
   ```
   sudo apt-get install docker.io
@@ -97,15 +112,15 @@ Hope this file can help everyone and get some inspiration !
   ```
   FROM [image name, like ubuntu]
   RUN apt-get update
-  \\ make a directory
+  // make a directory
   MKDIR test
-  \\ copy file from host to container's directory 
+  // copy file from host to container's directory 
   COPY test.cpp /test
   ```
   * build the images
   ```
   docker build -t [your image name, like myubuntu:v1] .
-  \\ check image constructed or not
+  // check image constructed or not
   docker images
   ```
   * construct the container & run container
