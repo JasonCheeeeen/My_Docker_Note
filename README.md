@@ -19,7 +19,7 @@ Hope this file can help everyone and get some inspiration !
   // push to docker hub
   docker push jxxxxxxj/test-container:1.0.0
   ```
-* Install Docker engine (Ubuntu)
+* Install Docker engine (Ubuntu)  
   ```
   sudo apt-get install docker.io
 
