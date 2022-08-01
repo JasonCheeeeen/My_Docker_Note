@@ -133,7 +133,37 @@ Hope this file can help everyone and get some inspiration !
   ./test
   exit
   ```
+* construct data volume without connecting to container
+  ```
+  docker volume create [volume name]
+  ```
+* construct data volume with container
+  ```
+  docker run -it --name=[container's name] -v [data volume]:/[container data path of data volume] [image name]
 
+  // container can have many data volume
+  docker run -it --name=[container's name] -v [data volume]:/[container data path of data volume] -v [data volume]:/[container data path of data volume] [image name]
+  ```
+* search data volume
+  ```
+  docker volume list
+  ```
+* delete data volume
+  ```
+  // remove one data volume
+  docker volume rm [data volume name or id]
+
+  // remove all data volume
+  docker volume rm $(docker volume list)
+  ```
+* construct data volume container (same as construct a container)
+  ```
+  docker create --name=[container name] -v [data volume]:/[container data path of data volume] [image name]
+  ```
+* connect to data volume container
+  ```
+  docker run -it --name=[container name] --volumes-from [name of data volume container] [image name]
+  ```
 
 
 ## Problems [Solved & Unsolved]
