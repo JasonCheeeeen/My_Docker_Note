@@ -22,5 +22,6 @@
 * when you use docker instructions and you do not want to use **sudo**</br>
   ***SOLVED***
   ```
+  sudo groupadd docker
   sudo usermod -aG docker **YOUR NAME**
   ```
