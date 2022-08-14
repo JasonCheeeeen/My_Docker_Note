@@ -41,8 +41,12 @@
   // -t -> create a terminal for container
   // -d -> run this containr in background
   // --name -> your container name, if you do not want to name, it will be a long ugly id, so...
-  docker run -i -t -d --name=[yourname]:[some message, like version] [image name]
+  docker run -i -t -d --name=[your container name] [image name]
   // ex: docker run -i -t -d --name=myubuntu:v0 ubuntu
+  ```
+* construct image from container
+  ```
+  docker commit -m 'some message about modification' -s 'your name' [container id] [image name and version]
   ```
 * search the container we create
   ```
