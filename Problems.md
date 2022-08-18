@@ -1,5 +1,5 @@
 # Problems [Solved & Unsolved]
-* The ubuntu on VMWare and no network connection</br>
+* The ubuntu on VMware and no network connection</br>
   ***SOLVED***
   * there has the image of network
   ```
@@ -19,7 +19,7 @@
   ```
   sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
   ```
-* when you use docker instructions and you do not want to use **sudo**</br>
+* When you use docker instructions and you do not want to use **sudo**</br>
   ***SOLVED***
   ```
   sudo groupadd docker

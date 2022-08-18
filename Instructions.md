@@ -14,6 +14,14 @@
   // push to docker hub
   docker push jxxxxxxj/test-container:1.0.0
   ```
+* Use tar to save and load the image
+  ```
+  // save
+  docker save -o [image name.tar] [image name]
+
+  // load
+  docker load -i [image name.tar]
+  ```
 * Install Docker engine (Ubuntu)  
   ```
   sudo apt-get install docker.io
