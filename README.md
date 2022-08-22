@@ -9,4 +9,6 @@ Also, there is a file ***Instructions.md*** which can help you to try and memori
 If you have some problems and code you want to reshare or somethig I wrote wrong,</br> 
 you can commit your file, and i will check and merge your commit.</br>
 
+By the way, there has some reference about k8s, i think this is helpful for learning.</br>
+
 Hope this file can help everyone and get some inspiration !
