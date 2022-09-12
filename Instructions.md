@@ -64,6 +64,12 @@
   // show all containers (include sleeping containers)
   docker ps -a
   ```
+* search docker logs
+  ```
+  docker logs [options] [container name]
+  // options -> -t | --tail | --since | if
+  // ex: docker logs --since="2022/9/12" --tail=10 container.name
+  ```
 * stop the running container
   ```
   docker stop [container name or container id]
